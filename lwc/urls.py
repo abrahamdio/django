@@ -18,7 +18,8 @@ from django.contrib import admin
 from lwc import views
 
 urlpatterns = [
-	url(r'^$', 'joins.views.home', name='home'),
+    url(r'^$', 'lwc.views.index', name='index'),
+	url(r'^home/', 'joins.views.home', name='home'),
 	# url(r'^home/', 'joins.views.home', name='home'),
     url(r'^admin/', include(admin.site.urls)),
 ]
