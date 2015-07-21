@@ -1,4 +1,4 @@
-"""lwc URL Configuration
+"""lwc-test URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.8/topics/http/urls/
@@ -23,6 +23,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     url(r'^$', 'lwc.views.index', name='index'),
 	url(r'^home/', 'joins.views.home', name='home'),
+    url(r'^landingpage/', 'lwc.views.landingpage', name='landingpage'),
 	# url(r'^home/', 'joins.views.home', name='home'),
     url(r'^admin/', include(admin.site.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
